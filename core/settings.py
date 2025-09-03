@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-ezp6_c$deiq&8u&=$y86ti2fn+end)*=ywmue1tdrjk-gyafgs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# allowed all hosts to resolve error in production
+ALLOWED_HOSTS = [
+  '*', 
+]
 
 
 # Application definition
@@ -56,6 +59,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "https://track-my-prep-webapp.vercel.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
@@ -121,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
